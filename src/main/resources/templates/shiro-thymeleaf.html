@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    <a th:href="@{/login}">登录</a>
+</p>
+
+
+<div shiro:hasPermisson="user:add">
+    <a th:href="@{/user/add}">add</a>
+</div>
+
+<div shiro:hasPermisson="user:del">
+    <a th:href="@{/user/del}">del</a>
+</div>
+
+
+</body>
+</html>
